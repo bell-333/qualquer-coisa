@@ -1,0 +1,44 @@
+<!-- Conteúdo principal -->
+<div class="container mt-5">
+    <div class="row align-items-stretch">
+      <!-- Formulário (agora ocupa mais espaço) -->
+      <div class="col-md-12 col-lg-7 mb-4">
+        <h2 class="mb-4 text-center">Envie seu comentário</h2>
+        <form id="formContato" class="h-100 d-flex flex-column justify-content-between p-4 bg-white rounded shadow">
+          <div>
+            <div class="mb-3 input-group">
+              <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+              <input type="text" class="form-control" id="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="mb-3 input-group">
+              <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+              <input type="email" class="form-control" id="email" placeholder="seu@email.com" required />
+            </div>
+            <div class="mb-3 input-group">
+              <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+              <input type="tel" class="form-control" id="telefone" placeholder="(11) 99999-9999" />
+            </div>
+            <div class="mb-3">
+              <label for="mensagem" class="form-label">Mensagem:</label>
+              <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem aqui..." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="assunto" class="form-label">Assunto:</label>
+              <select class="form-select" id="assunto">
+                <option>Suporte</option>
+                <option>Orçamento</option>
+                <option>Parceria</option>
+                <option>Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-primary">
+              <span id="loading" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+              Enviar
+            </button>
+            <a href="index.html" class="btn btn-secondary">Voltar</a>
+          </div>
+          <div id="msgSucesso" class="alert alert-success mt-3 d-none">Mensagem enviada com sucesso!</div>
+        </form>
+      </div>
