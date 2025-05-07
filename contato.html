@@ -63,3 +63,19 @@
       </div>
     </div>
   </div>  
+  <script>
+    const form = document.getElementById("formContato");
+    const msgSucesso = document.getElementById("msgSucesso");
+    const loading = document.getElementById("loading");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      loading.classList.remove("d-none");
+
+      setTimeout(() => {
+        loading.classList.add("d-none");
+        msgSucesso.classList.remove("d-none");
+        form.reset();
+      }, 1500);
+    });
+  </script>
